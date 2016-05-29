@@ -20,7 +20,7 @@
 {
     GLKMatrix4 _rotateMatrix4;
 
-    int _tapCount;
+    NSInteger _tapCount;
 }
 @property (strong,nonatomic)EAGLContext * context;
 @property (strong,nonatomic)GLKBaseEffect * effect;
@@ -96,7 +96,7 @@
 -(void)update{
     
     CGSize size=self.view.bounds.size;
-    float aspect=fabsf(size.width/size.height);
+    float aspect=fabs(size.width/size.height);
    
     GLKMatrix4 projectionMatrix=GLKMatrix4MakePerspective(GLKMathDegreesToRadians(65), aspect, 0.1, 10);
     
